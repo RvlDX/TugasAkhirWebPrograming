@@ -1,0 +1,228 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px; /* Tambahkan tinggi navbar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tambahkan padding-top ke konten untuk mengkompensasi tinggi navbar */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+    background-color: rgb(231, 231, 231);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Section yang lain */
+section {
+    padding: 60px 20px; /* Tambahkan lebih banyak padding untuk konten */
+}
+
+
+header .logo {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling untuk item navbar */
+nav ul li a {
+    position: relative; /* Untuk memastikan pseudo-elemen ::before ditempatkan relatif terhadap item ini */
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Animasi garis bawah */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Jarak sedikit di bawah teks */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; /* Awalnya garis tidak terlihat */
+    height: 2px;
+    background-color: #e67e22; /* Warna garis */
+    visibility: hidden; /* Garis tidak terlihat di awal */
+    transition: width 0.3s ease-in-out; /* Transisi lebar untuk animasi */
+}
+
+/* Hover efek: munculkan garis bawah */
+nav ul li a:hover::before {
+    visibility: visible; /* Garis terlihat saat hover */
+    width: 100%; /* Lebar penuh saat hover */
+}
+
+nav ul li a:hover {
+    color: #e67e22; /* Ubah warna teks saat di-hover */
+}
+
+/* Hero section */
+.banner {
+    height: 100vh;
+    background-image: url('assets/nasi-padang.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Menu section */
+.menu {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap; /* Flex-wrap agar item tidak hilang */
+    justify-content: center;
+    gap: 40px; /* Space antara item */
+}
+
+
+.item {
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.item img {
+    width: 100%; /* Gambar otomatis menyesuaikan ukuran container */
+    height: auto;
+}
+
+
+.item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+.item p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact section */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button {
+    background-color: #009900;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #d35400;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffcc00;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+header {
+    z-index: 1000; /* Pastikan header selalu di atas */
+}
+
+.menu {
+    z-index: 1; /* Pastikan tidak tertutup elemen lain */
+}
