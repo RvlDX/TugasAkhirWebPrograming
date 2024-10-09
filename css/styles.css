@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+    background-color: rgb(231, 231, 231);
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -15,26 +21,9 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 80px; /* Tambahkan tinggi navbar */
+    height: 80px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Tambahkan padding-top ke konten untuk mengkompensasi tinggi navbar */
-body {
-    font-family: 'Poppins', sans-serif;
-    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
-    background-color: rgb(231, 231, 231);
-}
-
-h1 {
-    text-align: center;
-}
-
-/* Section yang lain */
-section {
-    padding: 60px 20px; /* Tambahkan lebih banyak padding untuk konten */
-}
-
 
 header .logo {
     width: 120px;
@@ -46,44 +35,40 @@ nav ul {
     gap: 20px;
 }
 
-/* Styling untuk item navbar */
 nav ul li a {
-    position: relative; /* Untuk memastikan pseudo-elemen ::before ditempatkan relatif terhadap item ini */
+    position: relative;
     color: #666666;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 15px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Animasi garis bawah */
 nav ul li a::before {
     content: '';
     position: absolute;
-    bottom: -5px; /* Jarak sedikit di bawah teks */
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 0; /* Awalnya garis tidak terlihat */
+    width: 0;
     height: 2px;
-    background-color: #e67e22; /* Warna garis */
-    visibility: hidden; /* Garis tidak terlihat di awal */
-    transition: width 0.3s ease-in-out; /* Transisi lebar untuk animasi */
+    background-color: #e67e22;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
 }
 
-/* Hover efek: munculkan garis bawah */
 nav ul li a:hover::before {
-    visibility: visible; /* Garis terlihat saat hover */
-    width: 100%; /* Lebar penuh saat hover */
+    visibility: visible;
+    width: 100%;
 }
 
 nav ul li a:hover {
-    color: #e67e22; /* Ubah warna teks saat di-hover */
+    color: #e67e22;
 }
 
-/* Hero section */
 .banner {
     height: 100vh;
-    background-image: url('assets/nasi-padang.jpg');
+    background-image: url('https://via.placeholder.com/1920');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -91,26 +76,28 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 0 20px;
 }
 
 .banner h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .banner p {
     font-size: 1.2rem;
     max-width: 700px;
     text-align: center;
+    animation: fadeIn 3s ease-in-out;
 }
 
-/* Menu section */
 .menu {
     padding: 50px 20px;
     background-color: #fff;
     text-align: center;
+    z-index: 1;
 }
 
 .menu h2 {
@@ -121,11 +108,10 @@ nav ul li a:hover {
 
 .menu-items {
     display: flex;
-    flex-wrap: wrap; /* Flex-wrap agar item tidak hilang */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Space antara item */
+    gap: 40px;
 }
-
 
 .item {
     width: 250px;
@@ -134,10 +120,9 @@ nav ul li a:hover {
 }
 
 .item img {
-    width: 100%; /* Gambar otomatis menyesuaikan ukuran container */
+    width: 100%;
     height: auto;
 }
-
 
 .item h3 {
     font-size: 1.5rem;
@@ -154,7 +139,6 @@ nav ul li a:hover {
     transform: translateY(-10px);
 }
 
-/* Contact section */
 .contact {
     padding: 50px 20px;
     background-color: #f9f9f9;
@@ -171,32 +155,27 @@ nav ul li a:hover {
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form input, form textarea, form button {
-    margin-top: 10px;
+form input[type="text"], form button {
     padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     font-size: 1rem;
-    width: 100%;
 }
 
 form button {
-    background-color: #009900;
+    background-color: #28a745;
     color: white;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
     transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #d35400;
+    background-color: #1b5e20;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -204,33 +183,13 @@ footer {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .menu-items {
-        flex-direction: column;
-        gap: 20px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-
-    .banner h1 {
-        font-size: 2.5rem;
+    to {
+        opacity: 1;
     }
-
-    .banner p {
-        font-size: 1rem;
-    }
-}
-
-header {
-    z-index: 1000; /* Pastikan header selalu di atas */
-}
-
-.menu {
-    z-index: 1; /* Pastikan tidak tertutup elemen lain */
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 .logo {
@@ -363,4 +322,60 @@ body {
 
 .contact button:hover {
     background-color: #1b5e20;
+}
+
+.about-us img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+header .logo, .about-us img {
+    width: 100px; /* Sesuaikan ukuran logo dan gambar tim */
+    height: auto; /* Pertahankan rasio aspek */
+}
+
+/* Media query untuk layar ponsel */
+@media (max-width: 768px) {
+    /* Navbar */
+    nav ul {
+        flex-direction: column; /* Ubah arah flex menjadi kolom */
+        gap: 10px; /* Kurangi jarak antar item */
+    }
+
+    nav ul li {
+        text-align: right; /* Sesuaikan alignment teks */
+    }
+
+    .navbar-toggler {
+        display: block; /* Pastikan tombol toggler terlihat */
+    }
+
+    .collapse.show {
+        background-color: #ffcc00; /* Tambahkan latar belakang untuk visibilitas */
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+
+    .collapse.show ul {
+        flex-direction: column;
+        align-items: flex-start; /* Sesuaikan alignment untuk tampilan kolom */
+    }
+
+    .collapse.show li {
+        margin-bottom: 1rem;
+    }
+
+    .collapse.show a {
+        color: black;
+    }
+
+    .collapse.show a:hover {
+        color: #e67e22;
+    }
 }
