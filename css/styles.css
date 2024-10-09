@@ -32,7 +32,7 @@ header .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Kurangi jarak antar item */
 }
 
 nav ul li a {
@@ -110,13 +110,15 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 20px; /* Kurangi jarak antar item */
 }
 
 .item {
-    width: 250px;
+    width: 100%; /* Membuat item mengisi lebar kolom */
+    max-width: 250px; /* Atur lebar maksimum untuk item */
     text-align: center;
     transition: transform 0.3s ease;
+    
 }
 
 .item img {
@@ -178,7 +180,7 @@ form button:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+ padding: 20px;
     background-color: #ffcc00;
     font-size: 1rem;
 }
@@ -190,6 +192,13 @@ footer {
     to {
         opacity: 1;
     }
+}
+
+.card-img-top {
+    width: 100%; /* Membuat gambar mengisi lebar kartu */
+    height: auto; /* Menjaga rasio aspek gambar */
+    object-fit: cover;
+    margin: 0 auto; /* Memusatkan gambar di dalam kartu */
 }
 
 .logo {
@@ -211,16 +220,14 @@ footer {
 
 .card {
     transition: transform 0.3s ease;
+    width: 100%; /* Membuat kartu mengisi lebar kolom */
+    max-width: 250px; /* Atur lebar maksimum untuk kartu */
+    margin: 0 auto; /* Memusatkan kontainer */
+    margin-bottom: 20px;
 }
 
 .card:hover {
     transform: translateY(-10px);
-}
-
-.card-img-top {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
 }
 
 .card-body {
@@ -241,7 +248,7 @@ footer {
 }
 
 .navbar-nav {
-    gap: 20px;
+    gap: 15px; /* Kurangi jarak antar item */
 }
 
 .nav-link {
@@ -329,12 +336,6 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.card-img-top {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
 header .logo, .about-us img {
     width: 100px; /* Sesuaikan ukuran logo dan gambar tim */
     height: auto; /* Pertahankan rasio aspek */
@@ -372,10 +373,57 @@ header .logo, .about-us img {
     }
 
     .collapse.show a {
-        color: black;
+ color: black;
     }
 
     .collapse.show a:hover {
         color: #e67e22;
     }
+}
+
+.contact form {
+    max-width: 500px; /* Atur lebar maksimum untuk form */
+}
+
+.contact input[type="text"], .contact button {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-md-4 {
+    padding-left: 10px;  /* Kurangi padding kiri */
+    padding-right: 10px; /* Kurangi padding kanan */
+}
+
+.container {
+    padding-left: 15px; /* Sesuaikan padding kiri */
+    padding-right: 15px; /* Sesuaikan padding kanan */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700; /* Membuat teks judul lebih tebal */
+}
+
+.card-title {
+    font-weight: 600; /* Membuat teks judul kartu lebih tebal */
+    margin-bottom: 0.5rem;
+}
+
+.nav-link {
+    color: black;
+    transition: color 0.3s ease;
+    font-weight: 600; /* Membuat teks menu navigasi lebih tebal */
+}
+
+.card-text {
+    font-size: 1rem;
+    font-weight: 500; /* Membuat teks harga lebih tebal */
 }
