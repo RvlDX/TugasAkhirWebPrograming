@@ -1,129 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANGGI KOMPUTER - About Us</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Rumah Makan Padang Sederhana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header>
-        <img src="assets/logo.png" alt="Logo Rumah Makan" class="logo">
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-              <!-- Logo as Span -->
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- Header Section -->
+    <header class="bg-warning text-dark">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Daftar Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="paket.html">Daftar Paket</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="menu.html">Daftar Menu</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="paket.html">Daftar Paket</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="about.html">About</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
+            </nav>
+        </div>
     </header>
-  <!-- End Navbar -->
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <h1>Tentang Kami</h1>
-    <p>Anggi Komputer didukung oleh tim profesional yang berdedikasi. Kami siap melayani kebutuhan Anda.</p>
-  </section>
-  <!-- End Hero Section -->
+    <!-- About Us Section -->
+    <section class="about-us py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tentang Kami</h2>
+            <p class="text-center mb-5">Rumah Makan Padang Sederhana berdedikasi untuk menyajikan masakan Minang otentik dengan bahan-bahan berkualitas dan cita rasa yang khas. Kami telah melayani pelanggan dengan sepenuh hati sejak tahun 2000 dan berkomitmen untuk terus memberikan pengalaman kuliner yang terbaik.</p>
+            
+            <h2 class="text-center mb-5">Tim Kami</h2>
+            <div class="row">
+                <!-- Member 1 -->
+                <div class="col-md-3 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Anggota 1">
+                    <h5>Indra Saputra</h5>
+                    <p>Executive Chef</p>
+                    <p>Ahli dalam masakan Minang dengan pengalaman lebih dari 15 tahun.</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="col-md-3 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Anggota 2">
+                    <h5>Siti Nurhaliza</h5>
+                    <p>Manager Operasional</p>
+                    <p>Mengatur operasional restoran dengan efisien untuk memastikan kepuasan pelanggan.</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="col-md-3 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb-3" alt="Anggota 3">
+                    <h5>Ahmad Fadli</h5>
+                    <p>Server Senior</p>
+                    <p>Menyajikan layanan pelanggan terbaik dengan senyum dan keramahan.</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-md-3 text-center">
+                    <img src="https://via.placeholder.com/150" class="rounded-circle mb -3" alt="Anggota 4">
+                    <h5>Yusuf Maulana</h5>
+                    <p>Koki Senior</p>
+                    <p>Mengolah hidangan dengan cinta dan dedikasi untuk memastikan kualitas terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Us Section -->
-  <section class="about-us py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Tim Kami</h2>
-      <div class="row">
-        <!-- Member 1 -->
-        <div class="col-md-3 text-center">
-          <img src="img/awal.jpg" width="150" class="rounded-circle mb-3" alt="Anggota 1">
-          <h5>Anggi Dian Octavianingsih</h5>
-          <p>CEO & Founder</p>
-          <p>Pemimpin visioner dengan pengalaman lebih dari 10 tahun di industri komputer.</p>
-        </div>
-        <!-- Member 2 -->
-        <div class="col-md-3 text-center">
-          <img src="img/awal.jpg" width="150" class="rounded-circle mb-3" alt="Anggota 2">
-          <h5>Muhammad Awaluddin Azhari Ihsan</h5>
-          <p>Manager Operasional</p>
-          <p>Mengatur kegiatan operasional dengan efisien dan memastikan kepuasan pelanggan.</p>
-        </div>
-        <!-- Member 3 -->
-        <div class="col-md-3 text-center">
-          <img src="img/awal.jpg" width="150" class="rounded-circle mb-3" alt="Anggota 3">
-          <h5>Chandra Wijaya</h5>
-          <p>Teknisi Senior</p>
-          <p>Pakar di bidang perbaikan komputer dan jaringan, selalu memberikan solusi terbaik.</p>
-        </div>
-        <!-- Member 4 -->
-        <div class="col-md-3 text-center">
-          <img src="img/awal.jpg" width="150" class="rounded-circle mb-3" alt="Anggota 4">
-          <h5>Ahmad Ariful Fathoni</h5>
-          <p>Customer Support</p>
-          <p>Berkomitmen untuk memberikan layanan pelanggan terbaik dan solusi cepat.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End About Us Section -->
+    <!-- Footer Section -->
+    <footer class="bg-warning text-dark text-center py-3">
+        <p>&copy; 2024 Rumah Makan Padang Sederhana. All rights reserved.</p>
+    </footer>
 
-  <!-- Footer Section -->
-  <footer class="footer py-4 bg-dark text-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Kontak Kami</h5>
-          <p>Jl. Raya No. 123, Jakarta</p>
-          <p>Email: support@anggikomp.com</p>
-          <p>Telepon: (021) 12345678</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Jam Operasional</h5>
-          <p>Senin - Jumat: 09.00 - 18.00</p>
-          <p>Sabtu: 09.00 - 14.00</p>
-          <p>Minggu & Hari Libur: Tutup</p>
-        </div>
-        <div class="col-md-4">
-          <h5>Ikuti Kami</h5>
-          <a href="#" class="text-light">Facebook</a> | <a href="#" class="text-light">Instagram</a> | <a href="#" class="text-light">Twitter</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
