@@ -49,9 +49,9 @@ nav ul {
 /* Styling untuk item navbar */
 nav ul li a {
     position: relative; /* Untuk memastikan pseudo-elemen ::before ditempatkan relatif terhadap item ini */
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
+    color: #666666;
+    font-weight: 500px;
+    font-size: 15px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -225,4 +225,142 @@ header {
 
 .menu {
     z-index: 1; /* Pastikan tidak tertutup elemen lain */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 120px;
+}
+
+.banner {
+    height: 100vh;
+    background-image: url('https://via.placeholder.com/1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.navbar-toggler-icon {
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-link {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e67e22;
+}
+
+.navbar-toggler {
+    background-color: #e67e22;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+
+.navbar-toggler:hover {
+    background-color: #d35400;
+}
+
+.collapse {
+    justify-content: flex-end;
+}
+
+.collapse.show {
+    background-color: #ffcc00;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.collapse.show ul {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.collapse.show li {
+    margin-bottom: 1rem;
+}
+
+.collapse.show a {
+    color: black;
+}
+
+.collapse.show a:hover {
+    color: #e67e22;
+}
+
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact input[type="text"], .contact button {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.contact button {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0. 3s ease;
+}
+
+.contact button:hover {
+    background-color: #1b5e20;
 }
